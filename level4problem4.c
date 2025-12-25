@@ -1,13 +1,12 @@
 #include <stdio.h>
-int main ()
-{
-    int i=1,sum=0;
-    while(i<=6)
-    {
-        sum=sum+i;
-        i++;
-    }   
-    printf("Sum of 1to 5 =%d",sum);
+int main() {
+    int i = 6, sum = 0;
+start:
+    if (i >= 1) {
+        sum += i; 
+        i--;      
+        goto start; 
+    }
+    printf("Sum = %d", sum);
     return 0;
-    
 }
