@@ -1,19 +1,27 @@
 #include <stdio.h>
 int main()
 {
-    int i, last , a , b=1;
+    int i,first,last,a=0,b ;
     printf("Enter the number:");
     scanf("%d", &i);
-    last = i%10;
-    b=b*10;
-    if(last%2 ==0)
+    if(i%2==0)
     {
-        a=i;
+        printf("%d\n",i);
     }
     else
     {
-        a=(i/10)*(b-1)+((last-1)); 
+        b = i;
+        last = i%10;
+        for(first=b; first>=10; first=first/10)
+        a++;
+        int place=1;
+        for(int j=1; j<=a; j++)
+        {
+            place = place*10;
+        }
+        int middle = (i%place)/10;
+        int newnumber = (first-1)*place + middle*10 + last;
+        printf("%d\n", newnumber);
     }
-    printf("%d\n", a);
     return 0;
 }
