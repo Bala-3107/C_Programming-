@@ -1,11 +1,11 @@
 #include<stdio.h>
-int disp_2digit_ones(int a);
+int disp_2digit_ones5(int a);
 int main(){
     int x=10,y;
-    y=disp_2digit_ones(x);
+    y=disp_2digit_ones5(x);
     printf("%d\n",y);
 }
-int disp_2digit_ones(int a)
+int disp_2digit_ones5(int a)
 {
     int y=0;
     while(a<100)
