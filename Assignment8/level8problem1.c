@@ -1,6 +1,7 @@
 #include<stdio.h>
 int disp_sum(int a);
-int main(){
+int main()
+{
     int x=1,y;
     y=disp_sum(x);
     printf("%d\n",y);
